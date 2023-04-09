@@ -8,6 +8,11 @@ app.get('/', (req, res) => {
     res.send('<a href=`/works`> /works </a>');
 })
 
+app.get('/works', (req, res) => {
+    res.send('All works');
+})
+
+
 app.listen(PORT, () => {
     console.log(`Server listening om port ${PORT}`);
 })
