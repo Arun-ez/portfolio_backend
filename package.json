@@ -1,5 +1,5 @@
 {
-  "name": "image_uploader",
+  "name": "portfolio_backend",
   "version": "1.0.0",
   "description": "image upload server",
   "main": "server.js",
