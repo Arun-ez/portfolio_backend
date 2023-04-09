@@ -5,7 +5,7 @@ const PORT = 8080;
 
 
 app.get('/', (req, res) => {
-    res.send('<a href=`/works`> /works </a>');
+    res.send('<a href=`./works`> /works </a>');
 })
 
 app.get('/works', (req, res) => {
