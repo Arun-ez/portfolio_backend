@@ -1,18 +1,23 @@
+const fs = require('fs');
 const express = require('express');
+const connect = require('./configs/connect');
+const work_router = require('./routes/works.route');
 const app = express();
 app.use(express.static('uploads'));
+app.use(express.static('public'));
+app.use('/works', work_router);
 const PORT = 8080;
 
+connect();
 
 app.get('/', (req, res) => {
-    res.send('<a href=`./works`> /works </a>');
+    res.send(fs.readFileSync('./public/index.html', { encoding: "utf8", flag: "r" }));
 })
 
-app.get('/works', (req, res) => {
-    res.send('All works');
-})
 
 
 app.listen(PORT, () => {
-    console.log(`Server listening om port ${PORT}`);
+    console.log('---------------------------------');
+    console.log(`Server listening om port ${PORT}...`);
+    console.log('---------------------------------');
 })
