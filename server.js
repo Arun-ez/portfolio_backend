@@ -5,7 +5,7 @@ const PORT = 8080;
 
 
 app.get('/', (req, res) => {
-    res.send('Server running...');
+    res.send('<a href=`/works`> /works </a>');
 })
 
 app.listen(PORT, () => {
