@@ -13,14 +13,9 @@ const PORT = 8080;
 connect();
 
 app.get('/', (req, res) => {
-    res.send(fs.readFileSync('./public/index.html', { encoding: "utf8", flag: "r" }));
+    // res.send(fs.readFileSync('./public/index.html', { encoding: "utf8", flag: "r" }));
+    res.send("Server Running...");
 })
-
-app.get('*', (req, res) => {
-    res.send(fs.readFileSync('./public/index.html', { encoding: "utf8", flag: "r" }));
-})
-
-
 
 app.listen(PORT, () => {
     console.log('---------------------------------');
