@@ -1,8 +1,10 @@
 const fs = require('fs');
+const cors = require('cors')
 const express = require('express');
 const connect = require('./configs/connect');
 const work_router = require('./routes/works.route');
 const app = express();
+app.use(cors());
 app.use(express.static('uploads'));
 app.use(express.static('public'));
 app.use('/works', work_router);
