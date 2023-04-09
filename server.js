@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
     res.send(fs.readFileSync('./public/index.html', { encoding: "utf8", flag: "r" }));
 })
 
+app.get('*', (req, res) => {
+    res.send(fs.readFileSync('./public/index.html', { encoding: "utf8", flag: "r" }));
+})
+
 
 
 app.listen(PORT, () => {
